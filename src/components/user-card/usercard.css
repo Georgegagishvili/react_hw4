@@ -1,0 +1,23 @@
+.user-card-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border: 10px solid #fed700;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-family: cursive;
+}
+
+.user-card-wrapper span:nth-child(1) {
+  font-weight: 900;
+  font-family: cursive;
+}
+
+.user-card-wrapper img {
+  margin-top: 10px;
+  border-radius: 5px;
+}
