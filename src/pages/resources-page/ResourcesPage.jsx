@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import ResourceTable from "../../components/tables/resource-table";
+import { IsAuthProtected } from "../../hoc/isAuthProtected";
 
 import "./resourcepage.css";
 
@@ -10,7 +11,7 @@ function ResourcesPage() {
   const [resources, setResources] = useState([]);
 
   useEffect(() => {
-    fetch("https://reqres.in/api/unknown")
+    fetch(`${process.env.REACT_APP_REQRES_URL}/unknown`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -37,4 +38,4 @@ function ResourcesPage() {
   }
 }
 
-export default ResourcesPage;
+export default IsAuthProtected(ResourcesPage);

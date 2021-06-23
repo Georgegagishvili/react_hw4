@@ -35,6 +35,11 @@ function Navbar() {
                 Resources
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/auth">
+                Auth
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>

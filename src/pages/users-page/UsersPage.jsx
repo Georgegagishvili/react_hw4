@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import UserCard from "../../components/user-card";
+import { IsAuthProtected } from "../../hoc/isAuthProtected";
+import { logOut } from "../../services";
 
 import "./userspage.css";
 
@@ -10,8 +13,16 @@ function UsersPage() {
   const [users, setUsers] = useState([]);
   const [page, setPage] = useState(1);
 
+  //logout
+  const history = useHistory();
+  const onLogOut = async () => {
+    await logOut();
+    history.replace("/auth");
+  };
+  //endlogout
+
   useEffect(() => {
-    fetch(`https://reqres.in/api/users?page=${page}`)
+    fetch(`${process.env.REACT_APP_REQRES_URL}/users?page=${page}`)
       .then((res) => res.json())
       .then(
         (result) => {
@@ -46,9 +57,12 @@ function UsersPage() {
           ))}
         </div>
         <button onClick={nextPage}>Next Page</button>
+        <button className="mt-2" onClick={onLogOut}>
+          Log Out
+        </button>
       </div>
     );
   }
 }
 
-export default UsersPage;
+export default IsAuthProtected(UsersPage);
