@@ -5,7 +5,7 @@ import UserCard from "../../components/user-card";
 import { IsAuthProtected } from "../../hoc/isAuthProtected";
 import { logOut } from "../../services";
 
-import "./userspage.css";
+import styles from "./userspage.module.css";
 
 function UsersPage() {
   const [error, setError] = useState(null);
@@ -50,16 +50,20 @@ function UsersPage() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className="users-page-wrapper">
-        <div className="users-page-list">
+      <div className={styles.page_wrapper}>
+        <div className={styles.page_list}>
           {users.map((user) => (
             <UserCard user={user} key={user.id}></UserCard>
           ))}
         </div>
-        <button onClick={nextPage}>Next Page</button>
-        <button className="mt-2" onClick={onLogOut}>
-          Log Out
-        </button>
+        <div>
+          <button onClick={nextPage} className={`m-2 ${styles.button}`}>
+            Next Page
+          </button>
+          <button className={`${styles.button} m-2 `} onClick={onLogOut}>
+            Log Out
+          </button>
+        </div>
       </div>
     );
   }

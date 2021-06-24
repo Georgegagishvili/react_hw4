@@ -1,20 +1,21 @@
-.users-page-wrapper {
-  background-color: #ececec;
+.page_wrapper {
+  background-color: #494949;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   padding: 20px;
 }
-.users-page-list {
+.page_list {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 1%;
+  color: white;
 }
 
-.users-page-wrapper button {
+.button {
   border: none;
   border-radius: 15px;
   background-color: #fed700;
@@ -23,6 +24,6 @@
   font-family: cursive;
 }
 
-.users-page-wrapper button:hover {
+.page_wrapper button:hover {
   background: coral;
 }

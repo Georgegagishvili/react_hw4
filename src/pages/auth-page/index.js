@@ -7,7 +7,7 @@ import { IsNotAuthProtected } from "../../hoc/IsNotAuthProtected";
 function AuthPage() {
   const { pathname } = useLocation();
   return (
-    <div className="row bg-light p-5">
+    <div className="row bg-dark p-5" style={{ color: "white" }}>
       <div className="col-12 mb-5">
         <ul className="nav nav-pills nav-fill">
           <li className="nav-item">

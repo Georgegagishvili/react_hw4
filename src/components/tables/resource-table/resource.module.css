@@ -1,0 +1,20 @@
+.table {
+  font-family: cursive;
+  font-size: 20px;
+  text-align: center;
+}
+.table tr:nth-child(odd) {
+  background-color: #3a3b3c;
+  color: #fed700;
+}
+.table tr:nth-child(even) {
+  background: #303031;
+  color: #ff4560;
+}
+
+.table td,
+th,
+thead {
+  border: 2px solid #7a7474;
+  padding: 20px;
+}

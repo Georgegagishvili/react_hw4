@@ -9,7 +9,7 @@ function SingleNote({ note }) {
         background: "#fed700",
       }}
     >
-      <li>
+      <li styles={{ textDecoration: "none" }}>
         {note.title} & {note.id}
       </li>
     </div>

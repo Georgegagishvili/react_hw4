@@ -33,6 +33,9 @@ function MainPage() {
             flexWrap: "wrap",
             flexDirection: "row",
             justifyContent: "center",
+            textDecoration: "none",
+            listStyle: "none",
+            textAlign: "center",
           }}
         >
           {items.map((item) => (

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ResourceTable from "../../components/tables/resource-table";
 import { IsAuthProtected } from "../../hoc/isAuthProtected";
 
-import "./resourcepage.css";
+import styles from "./resourcepage.module.css";
 
 function ResourcesPage() {
   const [error, setError] = useState(null);
@@ -31,7 +31,7 @@ function ResourcesPage() {
     return <div>Error has occured... {error}</div>;
   } else {
     return (
-      <div className="resources-wrapper">
+      <div className={styles.wrapper}>
         <ResourceTable resources={resources}></ResourceTable>
       </div>
     );
